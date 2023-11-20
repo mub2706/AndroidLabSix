@@ -1,9 +1,21 @@
 package com.cst3104.androidlab6;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class ChatMessage {
-    private String message;
-    private String timeSent;
-    private boolean isSentButton;
+    @ColumnInfo(name="message")
+    protected String message;
+    @ColumnInfo(name="TimeSent")
+    protected String timeSent;
+    @ColumnInfo(name="isSentButton")
+    protected boolean isSentButton;
+
+    @PrimaryKey (autoGenerate = true)
+    @ColumnInfo(name="id")
+    public int id;
 
     // Constructor
     public ChatMessage(String message, String timeSent, boolean isSentButton) {

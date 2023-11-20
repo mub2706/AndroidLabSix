@@ -5,20 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.cst3104.androidlab6.databinding.ActivityChatRoomBinding;
-import com.cst3104.androidlab6.databinding.ReceiveMessageBinding;
 import com.cst3104.androidlab6.databinding.SentMessageBinding;
-
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -157,6 +151,7 @@ class MyRowHolder extends RecyclerView.ViewHolder {
 
     TextView messageText1;
     TextView timeText1;
+
     public MyRowHolder(@NonNull View itemView) {
         super(itemView);
 
@@ -165,9 +160,5 @@ class MyRowHolder extends RecyclerView.ViewHolder {
 
         messageText1 = itemView.findViewById(R.id.textMessage1);
         timeText1 = itemView.findViewById(R.id.timeMessage1);
-
-
-
-
     }
 }
